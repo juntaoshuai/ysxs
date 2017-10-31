@@ -1,0 +1,53 @@
+body,div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,h6,form,input,textarea,p,th,td{margin:0; padding:0;}
+html{height: 100%;}
+body{min-height: 100%; margin:0 auto;font-size: .36rem;font-family: PingFang SC, Lantinghei SC, Helvetica Neue, Helvetica, Arial, Microsoft YaHei, "sans-serif";    -webkit-font-smoothing: antialiased;}
+* {-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-box-sizing:border-box;box-sizing: border-box;-webkit-text-size-adjust: none;-webkit-touch-callout:none;}
+input,select,textarea{-webkit-appearance:none;outline:none;border-radius:0;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;}
+table{ border-collapse:collapse; border-spacing:0;}
+img{vertical-align:top;border:none;}
+ol,ul{ list-style:none;}
+a{text-decoration: none;}
+.tc{ text-align:center;}
+.fl{ float:left;}
+.fr{ float:right;}
+.cb{ clear:both;}
+.clearfix:after{ content:'.'; display:block; clear:both; visibility:hidden; height:0;}
+.vm{vertical-align:middle;}
+.db{display:block;}
+.dn{display:none;}
+
+@media screen and (min-width: 320px) {
+  html{font-size: 45px;}   
+} 
+@media screen and (min-width: 360px) {
+  html{font-size: 50px;}   
+} 
+@media screen and (min-width: 375px) {
+  html{font-size: 52px;}   
+} 
+@media screen and (min-width: 414px) {
+  html{font-size: 58px;}   
+} 
+.pat-tabs {font-size: 0;}
+.pat-tabs li {width: 33.3%; height: .79rem; line-height: .79rem; display: inline-block; border-bottom: 1px solid #d2d2d2; font-size: .32rem; text-align: center;}
+.pat-tabs li a {color: #333; display: block;}
+.pat-tabs li.active {border-bottom: 2px solid #1c92fe;}
+.pat-tabs li.active a {color: #1c92fe;}
+
+.pat-list li{border-bottom: 1px solid #dcdcdc; padding-bottom: .16rem; margin-top: .16rem; overflow: hidden; margin: .16rem .15rem 0;}
+.pat-list li h3 {float: left;}
+.pat-list li .profile {margin-left: 1.6rem;}
+.pat-list li img {width: 1.41rem; height: 1.21rem;}
+.pat-list li p {margin-top: .1rem; overflow: hidden;}
+.pat-list li h4 {font-size: .28rem; line-height: .36rem; color: #333;}
+.pat-list li .pub-time {font-size: .24rem; line-height: .4rem; color: #b2b2b2; float: left;}
+.pat-list li .state {width: .96rem; height: .4rem; font-size: .2rem; color:#fff; line-height: .4rem; text-align: center; border-radius: .04rem; float: right;}
+.pat-list li .state1 {background: #b2b2b2}
+.pat-list li .state2 {background: #edb52f}
+.pat-list li .state3 {background: #2f9aed}
+.pat-list li .state4 {background: #009944}
+
+.mypai {background: #f2f2f2; padding: .12rem .15rem 0; }
+.mypai textarea {background: #fff; border: 1px solid #e5e5e5; width: 100%; font-size: .24rem; line-height: .3rem; color: #c6c6c6; padding: .18rem 0 0 .17rem; resize: none;}
+::-webkit-input-placeholder { color: #c6c6c6;}
