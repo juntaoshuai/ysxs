@@ -48,6 +48,27 @@ a{text-decoration: none;}
 .pat-list li .state3 {background: #2f9aed}
 .pat-list li .state4 {background: #009944}
 
-.mypai {background: #f2f2f2; padding: .12rem .15rem 0; }
+.mypai { background: #fff;}
+.text-wrap {background: #f2f2f2; padding: .12rem .15rem 0;}
 .mypai textarea {background: #fff; border: 1px solid #e5e5e5; width: 100%; font-size: .24rem; line-height: .3rem; color: #c6c6c6; padding: .18rem 0 0 .17rem; resize: none;}
 ::-webkit-input-placeholder { color: #c6c6c6;}
+.pai-item {border-bottom: 1px solid #e1e1e1; margin: 0 .15rem;}
+.pai-item:first-child {margin: 0; border-bottom: none;}
+.pai-item h4 {font-size: .28rem; line-height: .52rem; color:#1c92fe; margin:0 -.15rem; padding: .08rem 0 0 .15rem; background: #f2f2f2; border-bottom: 1px solid #e5e5e5;}
+
+.upload-photos {margin-top: .18rem; }
+.upload-list li {float: left; width: 32%; height: 1.81rem; margin-right: 2%; margin-bottom: .18rem;}
+.upload-list li img {width: 100%; height: 100%;}
+.upload-list li:nth-child(3n) {margin-right: 0;}
+.upload-list li.add-photo {line-height: 1.81rem; text-align: center; border: 1px solid #e5e5e5;}
+.upload-list li.add-photo i {font-size: .4rem; color: #d6d6d6;}
+.works-type, .pai-location {height: .84rem; line-height: .84rem; font-size: .32rem; color: #333;}
+.works-type i {color: #787878;}
+.pai-location .icon-del {color:#d8d8d8;}
+.pai-item i{display: inline-block; vertical-align: middle;}
+
+.noname {font-size: .28rem; line-height: .32rem; color: #787878; padding: .36rem .43rem .48rem 0;}
+.noname input {width: .36rem; height: .36rem; background: url(../images/check_box.png) left -2px no-repeat; background-size: contain; -webkit-appearance: none;border:none; vertical-align: top; margin-right: .04rem;}
+.noname input:checked {background-image: url(../images/check_box1.png)}
+
+.publish-btn {width: 88%; height: .94rem; background: #1c92fe; border-radius: .04rem; font-size: .36rem; color:#fff; text-align: center; border: none; margin-bottom: .94rem;}

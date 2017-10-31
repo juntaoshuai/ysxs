@@ -1,38 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>我拍</title>
     <link rel="stylesheet" type="text/css" href="css/page.css">
-    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
 </head>
+
 <body>
     <nav class="pat-tabs">
         <ul>
-            <li><a href="list.html">列表</a></li>
-            <li class="active"><a href="pat.html">我拍</a></li>
-            <li><a href="mypat.html">我的</a></li>
+            <li>
+                <a href="list.html">列表</a>
+            </li>
+            <li class="active">
+                <a href="pat.html">我拍</a>
+            </li>
+            <li>
+                <a href="mypat.html">我的</a>
+            </li>
         </ul>
     </nav>
     <div class="mypai">
         <form action="">
             <div class="pai-item">
-                <textarea name="" id="" cols="30" rows="10" placeholder="请输入文字描述（500字以内）"></textarea>
+                <div class="text-wrap">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="请输入文字描述（500字以内）"></textarea>
+                </div>
             </div>
             <div class="pai-item">
                 <h4>照片上传</h4>
-                <div class="photos"></div>
+                <div class="upload-photos">
+                    <ul class="upload-list clearfix">
+                        <li>
+                            <img src="./images/banner1.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="./images/banner1.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="./images/banner1.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="./images/banner1.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="./images/banner1.jpg" alt="">
+                        </li>
+                        <li class="add-photo">
+                            <i class="iconfont icon-add"></i>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="pai-item">
-                <p class="works-type">请选择作品分类</p>
+                <p class="works-type">请选择作品分类
+                    <i class="iconfont icon-More fr"></i>
+                </p>
             </div>
             <div class="pai-item">
-                <input type="text" name="" id="">
+                <p class="pai-location"><i class="iconfont icon-location"></i>定位地点<i class="iconfont icon-del"></i></p>
             </div>
-            <p class="noname fr">匿名</p>    
-            <input type="button" value="发布">
+            <label class="noname fr"><input type="checkbox" name="noname">匿名</label>
+            <p class="tc cb">
+                <input type="button" value="发布" class="publish-btn">
+            </p>
         </form>
     </div>
 
@@ -40,11 +75,8 @@
 
 
 
-<script type="text/javascript" src="js/zepto.min.js"></script>
-<script type="text/javascript" src="js/fastclick.js"></script>
-<script type="text/javascript" src="js/iscroll-probe.js"></script>
-<script type="text/javascript" src="js/echo.min.js"></script>
-<script type="text/javascript" src="js/swiper.min.js"></script>
-<script type="text/javascript" src="js/index.js?v=1"></script>  
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
 </body>
+
 </html>
