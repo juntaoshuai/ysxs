@@ -92,11 +92,11 @@
 	transform:translateY(0)
 }
 }.layui-m-anim-up {
-	/* -webkit-animation-name:layui-m-anim-up;
-	animation-name:layui-m-anim-up */
+	-webkit-animation-name:layui-m-anim-up;
+	animation-name:layui-m-anim-up
 
-	-webkit-animation-name:layui-m-anim-scale;
-	animation-name:layui-m-anim-scale
+	/* -webkit-animation-name:layui-m-anim-scale;
+	animation-name:layui-m-anim-scale */
 
 	
 }

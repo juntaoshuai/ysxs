@@ -57,11 +57,13 @@ a{text-decoration: none;}
 .pai-item h4 {font-size: .28rem; line-height: .52rem; color:#1c92fe; margin:0 -.15rem; padding: .08rem 0 0 .15rem; background: #f2f2f2; border-bottom: 1px solid #e5e5e5;}
 
 .upload-photos {margin-top: .18rem; }
-.upload-list li {float: left; width: 32%; height: 1.81rem; margin-right: 2%; margin-bottom: .18rem;}
+.upload-list li {float: left; width: 32%; height: 1.81rem; margin-right: 2%; margin-bottom: .18rem; position: relative; overflow: hidden;}
 .upload-list li img {width: 100%; height: 100%;}
 .upload-list li:nth-child(3n) {margin-right: 0;}
 .upload-list li.add-photo {line-height: 1.81rem; text-align: center; border: 1px solid #e5e5e5;}
 .upload-list li.add-photo i {font-size: .4rem; color: #d6d6d6;}
+.upload-list .del-photo {position: absolute;right: -.27rem;top: -.27rem;width: .54rem;height: .54rem;line-height: 0.75rem;border-radius: 50%;background: rgba(61, 61, 61, .82);color:#fff;font-size: .24rem;padding-left: .1rem; cursor: pointer;}
+
 .works-type, .pai-location {height: .84rem; line-height: .84rem; font-size: .32rem; color: #333;}
 .works-type i {color: #787878;}
 .pai-location .icon-del {color:#d8d8d8;}
