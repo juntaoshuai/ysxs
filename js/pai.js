@@ -36,15 +36,6 @@ $(function(){
     }
     
 
-    //选择作品分类
-    $(".works-type").on('click',function(){
-        layer.open({
-            type: 1
-            ,content: ''
-            ,anim: 'up'
-            ,style: 'position:fixed; bottom:0; left:0; width: 100%; height: 200px; padding:10px 0; border:none;'
-        });    
-    })
 
     
 

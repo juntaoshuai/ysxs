@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="css/page.css">
     <link rel="stylesheet" type="text/css" href="font/iconfont.css">
     <link rel="stylesheet" type="text/css" href="./css/webuploader.css">
+    <link rel="stylesheet" type="text/css" href="./css/mobiscroll.custom-2.5.2.min.css">
+
 
 </head>
 
@@ -59,9 +61,21 @@
                 </div>
             </div>
             <div class="pai-item">
-                <p class="works-type">请选择作品分类
+                <p class="works-type" id="works-type">请选择作品分类
                     <i class="iconfont icon-More fr"></i>
                 </p>
+
+                <select name="City" id="demo">
+                    <option value="1">城市垃圾</option>
+                    <option value="2">交通陋习</option>
+                    <option value="3">Boston</option>
+                    <option value="4">Chicago</option>
+                    <option value="5">London</option>
+                    <option value="6">Los Angeles</option>
+                    <option value="7">New York</option>
+                    <option value="8">Paris</option>
+                    <option value="9">San Francisco</option>
+                </select>
             </div>
             <div class="pai-item">
                 <p class="pai-location"><i class="iconfont icon-location"></i>定位地点<i class="iconfont icon-del"></i></p>
@@ -74,7 +88,7 @@
     </div>
     
     <!--选择作品分类弹窗 开始-->
-    <div class="work-popup">
+<!--     <div class="work-popup">
         <div class="w-hd">
             <span>取消</span>
             <h3>选择作品类型</h3>
@@ -90,7 +104,7 @@
 
 
 
-    </div>
+    </div> -->
     <!--选择作品分类弹窗 结束-->
 
 
@@ -100,7 +114,21 @@
     <script type="text/javascript" src="js/fastclick.js"></script>
     <script type="text/javascript" src="js/layer_mobile/layer.js"></script>
     <script type="text/javascript" src="js/webuploader.min.js"></script>
+    <script type="text/javascript" src="js/mobiscroll.custom-2.5.2.min.js"></script>
+    <script type="text/javascript" src="js/mobiscroll.core-2.5.2.js"></script>
     <script type="text/javascript" src="js/pai.js"></script>
+    <script type="text/javascript">
+        $('#works-type').mobiscroll().select({
+            theme: 'ios',
+            display: 'bottom',
+            layout: 'liquid',
+            placeholder: 'Please select...',
+            data: {
+                url: '/content/json/languages.json',
+                type: 'json'
+            }
+    });
+    </script>
 </body>
 
 </html>
