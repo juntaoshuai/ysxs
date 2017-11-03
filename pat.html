@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="css/page.css">
     <link rel="stylesheet" type="text/css" href="font/iconfont.css">
     <link rel="stylesheet" type="text/css" href="./css/webuploader.css">
-    <link rel="stylesheet" type="text/css" href="./css/mobiscroll.custom-2.5.2.min.css">
 
 
 </head>
@@ -39,7 +38,7 @@
                 <h4>照片上传</h4>
                 <div class="upload-photos">
                     <ul class="upload-list clearfix">
-                        <li>
+                        <!-- <li>
                             <img src="./images/banner1.jpg" alt="">
                         </li>
                         <li>
@@ -53,81 +52,54 @@
                         </li>
                         <li>
                             <img src="./images/banner1.jpg" alt="">
-                        </li>
-                        <li class="add-photo">
+                        </li> -->
+                        <li class="add-photo" id="filePicker">
                             <i class="iconfont icon-add"></i>
                         </li>
                     </ul>
+                    
                 </div>
             </div>
             <div class="pai-item">
-                <p class="works-type" id="works-type">请选择作品分类
+                <div class="works-type-select">
+                    <select class="works-type" name="workstype">
+                        <option value="请选择作品分类">请选择作品分类</option>
+                        <option value="1">城市垃圾</option>
+                        <option value="2">交通陋习</option>
+                        <option value="3">城市垃圾</option>
+                        <option value="4">交通陋习</option>
+                    </select>
                     <i class="iconfont icon-More fr"></i>
-                </p>
-
-                <select name="City" id="demo">
-                    <option value="1">城市垃圾</option>
-                    <option value="2">交通陋习</option>
-                    <option value="3">Boston</option>
-                    <option value="4">Chicago</option>
-                    <option value="5">London</option>
-                    <option value="6">Los Angeles</option>
-                    <option value="7">New York</option>
-                    <option value="8">Paris</option>
-                    <option value="9">San Francisco</option>
-                </select>
+                </div>
             </div>
             <div class="pai-item">
-                <p class="pai-location"><i class="iconfont icon-location"></i>定位地点<i class="iconfont icon-del"></i></p>
+                <p class="pai-location">
+                    <i class="iconfont icon-location"></i>定位地点
+                    <i class="iconfont icon-del"></i>
+                </p>
             </div>
-            <label class="noname fr"><input type="checkbox" name="noname">匿名</label>
+            <label class="noname fr">
+                <input type="checkbox" name="noname">匿名</label>
             <p class="tc cb">
                 <input type="button" value="发布" class="publish-btn">
             </p>
         </form>
     </div>
-    
-    <!--选择作品分类弹窗 开始-->
-<!--     <div class="work-popup">
-        <div class="w-hd">
-            <span>取消</span>
-            <h3>选择作品类型</h3>
-            <span>确定</span>
-        </div>
-        <ul class="work-type-list">
-            <li>城市垃圾</li>
-            <li>交通陋习</li>
-            <li>城市垃圾</li>
-            <li>交通陋习</li>
-        </ul>
-        
 
-
-
-    </div> -->
-    <!--选择作品分类弹窗 结束-->
-
+   
 
 
 
     <script type="text/javascript" src="js/zepto.min.js"></script>
     <script type="text/javascript" src="js/fastclick.js"></script>
+    <script src="http://hr.ofweek.com/templates/default/js/jquery-1.8.0.min.js"></script>
     <script type="text/javascript" src="js/layer_mobile/layer.js"></script>
     <script type="text/javascript" src="js/webuploader.min.js"></script>
-    <script type="text/javascript" src="js/mobiscroll.custom-2.5.2.min.js"></script>
-    <script type="text/javascript" src="js/mobiscroll.core-2.5.2.js"></script>
+    <script type="text/javascript" src="js/upload.js"></script>
     <script type="text/javascript" src="js/pai.js"></script>
     <script type="text/javascript">
-        $('#works-type').mobiscroll().select({
-            theme: 'ios',
-            display: 'bottom',
-            layout: 'liquid',
-            placeholder: 'Please select...',
-            data: {
-                url: '/content/json/languages.json',
-                type: 'json'
-            }
-    });
+
+
     </script>
 </body>
 
