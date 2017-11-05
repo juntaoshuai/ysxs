@@ -1,5 +1,17 @@
+var $list = $('#fileList'),
+    // 优化retina, 在retina下这个值是2
+    ratio = window.devicePixelRatio || 1,
+
+    // 缩略图大小
+    thumbnailWidth = 100 * ratio,
+    thumbnailHeight = 100 * ratio,
+
+    // Web Uploader实例
+    uploader;
+
 // 初始化Web Uploader
-var uploader = WebUploader.create({
+
+uploader = WebUploader.create({
 
     // 选完文件后，是否自动上传。
     auto: true,
@@ -8,11 +20,12 @@ var uploader = WebUploader.create({
     swf: 'Uploader.swf',
 
     // 文件接收服务端。
-    server: 'http://webuploader.duapp.com/server/fileupload.php',
+     server: 'http://webuploader.duapp.com/server/fileupload.php',  //这里改成自己的地址
 
     // 选择文件的按钮。可选。
     // 内部根据当前运行是创建，可能是input元素，也可能是flash.
     pick: '#filePicker',
+    fileNumLimit: 5,
 
     // 只允许选择图片文件。
     accept: {
@@ -22,6 +35,9 @@ var uploader = WebUploader.create({
     }
 });
 
+uploader.on('uploadFinished', function (file) {
+    alert("litap")
+});
 // 当有文件添加进来的时候
 uploader.on('fileQueued', function (file) {
     var $li = $(
@@ -39,13 +55,14 @@ uploader.on('fileQueued', function (file) {
     // 如果为非图片文件，可以不用调用此方法。
     // thumbnailWidth x thumbnailHeight 为 100 x 100
     uploader.makeThumb(file, function (error, src) {
+        alert("mark")
         if (error) {
             $img.replaceWith('<span>不能预览</span>');
             return;
         }
 
         $img.attr('src', src);
-    }, 100, 100);
+    }, thumbnailWidth, thumbnailHeight);
 });
 
 // 文件上传过程中创建进度条实时显示。
@@ -84,4 +101,11 @@ uploader.on('uploadError', function (file) {
 // 完成上传完了，成功或者失败，先删除进度条。
 uploader.on('uploadComplete', function (file) {
     $('#' + file.id).find('.progress').remove();
+});
+
+$("#filePicker").click(function(){
+    if($(".upload-list .file-item").length == 5){
+        myLayer("最多只能上传5张");
+        return;
+    }
 });

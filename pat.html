@@ -31,7 +31,8 @@
         <form action="">
             <div class="pai-item">
                 <div class="text-wrap">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="请输入文字描述（500字以内）"></textarea>
+                    <textarea name="desc" id="desc" placeholder="请输入文字描述（500字以内）"></textarea>
+                    <p><span id="word-num">0</span>/500</p>
                 </div>
             </div>
             <div class="pai-item">
@@ -40,19 +41,8 @@
                     <ul class="upload-list clearfix">
                         <!-- <li>
                             <img src="./images/banner1.jpg" alt="">
-                        </li>
-                        <li>
-                            <img src="./images/banner1.jpg" alt="">
-                        </li>
-                        <li>
-                            <img src="./images/banner1.jpg" alt="">
-                        </li>
-                        <li>
-                            <img src="./images/banner1.jpg" alt="">
-                        </li>
-                        <li>
-                            <img src="./images/banner1.jpg" alt="">
-                        </li> -->
+                        </li>-->
+
                         <li class="add-photo" id="filePicker">
                             <i class="iconfont icon-add"></i>
                         </li>
@@ -65,9 +55,8 @@
                     <select class="works-type" name="workstype">
                         <option value="请选择作品分类">请选择作品分类</option>
                         <option value="1">城市垃圾</option>
-                        <option value="2">交通陋习</option>
-                        <option value="3">城市垃圾</option>
-                        <option value="4">交通陋习</option>
+                        <option value="2">井盖丢失</option>
+                        <option value="3">交通陋习</option>
                     </select>
                     <i class="iconfont icon-More fr"></i>
                 </div>
@@ -95,8 +84,9 @@
     <script src="http://hr.ofweek.com/templates/default/js/jquery-1.8.0.min.js"></script>
     <script type="text/javascript" src="js/layer_mobile/layer.js"></script>
     <script type="text/javascript" src="js/webuploader.min.js"></script>
-    <script type="text/javascript" src="js/upload.js"></script>
     <script type="text/javascript" src="js/pai.js"></script>
+    <script type="text/javascript" src="js/upload.js"></script>
+    
     <script type="text/javascript">
 
 
