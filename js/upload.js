@@ -1,5 +1,5 @@
-var $list = $('#fileList'),
-    $filePicker = $("#filePicker"),
+
+var $filePicker = $("#filePicker"),
     // 优化retina, 在retina下这个值是2
     ratio = window.devicePixelRatio || 1,
 
@@ -21,7 +21,7 @@ uploader = WebUploader.create({
     swf: 'Uploader.swf',
 
     // 文件接收服务端。
-     server: 'http://webuploader.duapp.com/server/fileupload.php',  //这里改成自己的地址
+    server: 'http://webuploader.duapp.com/server/fileupload.php',  //这里改成自己的地址
 
     // 选择文件的按钮。可选。
     // 内部根据当前运行是创建，可能是input元素，也可能是flash.
@@ -37,7 +37,7 @@ uploader = WebUploader.create({
 });
 
 uploader.on('uploadFinished', function (file) {
-    if($(".upload-list .file-item").length == 5){
+    if ($(".upload-list .file-item").length == 5) {
         $filePicker.hide();
     }
 
@@ -47,6 +47,7 @@ uploader.on('fileQueued', function (file) {
     var $li = $(
         '<li id="' + file.id + '" class="file-item thumbnail">' +
         '<img>' +
+        '<span class="del-photo">×</span>' +
         '</li>'
     ),
         $img = $li.find('img');
@@ -105,3 +106,27 @@ uploader.on('uploadError', function (file) {
 uploader.on('uploadComplete', function (file) {
     $('#' + file.id).find('.progress').remove();
 });
+
+
+//删除图片
+$(".upload-list").on('click', '.del-photo', function () {
+    var $this = $(this);
+    var fileId = $(this).parent().attr("id");
+    //询问框
+    layer.open({
+        title: '提示信息'
+        , content: '您确定删除该图片吗？'
+        , btn: ['确定', '取消']
+        , yes: function (index) {
+            $this.parent().remove();
+            $("#filePicker").show();
+
+            //removeFile( id ) ⇒ undefined
+            //移除某一文件, 会从 queue 中移除。
+            uploader.removeFile( fileId );
+            layer.close(index);
+        }
+    });
+
+
+})
