@@ -17,6 +17,7 @@ $(function () {
             , btn: ['确定', '取消']
             , yes: function (index) {
                 $this.parent().remove();
+                $("#filePicker").show();
                 layer.close(index);
             }
         });

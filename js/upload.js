@@ -1,4 +1,5 @@
 var $list = $('#fileList'),
+    $filePicker = $("#filePicker"),
     // 优化retina, 在retina下这个值是2
     ratio = window.devicePixelRatio || 1,
 
@@ -36,7 +37,10 @@ uploader = WebUploader.create({
 });
 
 uploader.on('uploadFinished', function (file) {
-    alert("litap")
+    if($(".upload-list .file-item").length == 5){
+        $filePicker.hide();
+    }
+
 });
 // 当有文件添加进来的时候
 uploader.on('fileQueued', function (file) {
@@ -55,7 +59,6 @@ uploader.on('fileQueued', function (file) {
     // 如果为非图片文件，可以不用调用此方法。
     // thumbnailWidth x thumbnailHeight 为 100 x 100
     uploader.makeThumb(file, function (error, src) {
-        alert("mark")
         if (error) {
             $img.replaceWith('<span>不能预览</span>');
             return;
@@ -101,11 +104,4 @@ uploader.on('uploadError', function (file) {
 // 完成上传完了，成功或者失败，先删除进度条。
 uploader.on('uploadComplete', function (file) {
     $('#' + file.id).find('.progress').remove();
-});
-
-$("#filePicker").click(function(){
-    if($(".upload-list .file-item").length == 5){
-        myLayer("最多只能上传5张");
-        return;
-    }
 });
