@@ -29,7 +29,47 @@ a{text-decoration: none;}
 @media screen and (min-width: 414px) {
   html{font-size: 58px;}   
 } 
-.pat-tabs {font-size: 0;}
+
+html, body {
+  overflow: hidden;
+  height: 100%;
+}
+
+.header {height: .97rem; line-height: .97rem; background: #1c92fe;position:absolute;left:0;top:0;width:100%;}
+.header .back{position: absolute; left:.12rem;top:.34rem;font-size: .3rem; line-height: .39rem; color:#fff;}
+.header h1 {font-size: .36rem; color: #fff; text-align: center;}
+
+#wrapper {
+  position: absolute;
+  left:0;
+  top: 1.76rem;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+#scroller {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  text-size-adjust: none;
+}
+.pat-tabs {font-size: 0;position: absolute;left:0;top:.97rem;width:100%; height: .79rem;}
 .pat-tabs li {width: 33.3%; height: .79rem; line-height: .79rem; display: inline-block; border-bottom: 1px solid #d2d2d2; font-size: .32rem; text-align: center;}
 .pat-tabs li a {color: #333; display: block;}
 .pat-tabs li.active {border-bottom: 2px solid #1c92fe;}
