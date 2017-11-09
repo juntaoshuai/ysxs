@@ -73,8 +73,8 @@ a{text-decoration: none;}
 .works-type {width: 100%;border:none;}
 .works-type, .pai-location {height: .84rem; line-height: .84rem; font-size: .32rem; color: #333;}
 .works-type-select i {color: #787878; position: absolute; right: .14rem; top:.2rem;}
-.pai-location .icon-del {color:#d8d8d8;}
-.pai-item i{display: inline-block; vertical-align: middle;}
+.pai-location .icon-del {color:#d8d8d8;margin-left: .05rem;}
+.pai-item i{display: inline-block;vertical-align: middle;}
 
 .noname {font-size: .28rem; line-height: .32rem; color: #787878; padding: .36rem .43rem .48rem 0;}
 .noname input {width: .36rem; height: .36rem; background: url(../images/check_box.png) left -2px no-repeat; background-size: contain; -webkit-appearance: none;border:none; vertical-align: top; margin-right: .04rem;}

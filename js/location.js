@@ -21,7 +21,7 @@ function showPosition(position){
 		},
 		success: function (json) { 
 			if(json.status==0){
-				$("#baidu_geo").html(json.result.formatted_address);
+				$("#baidu_geo").html(json.result.formatted_address+'<i class="iconfont icon-del"></i>');
 			}
 		},
 		error: function (XMLHttpRequest, textStatus, errorThrown) { 

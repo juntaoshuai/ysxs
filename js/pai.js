@@ -25,6 +25,14 @@ $(function () {
         $wordNum.html($desc.val().length);
     })
 
+    //清空定位
+    $(".pai-location").on('click','.icon-del',function(){
+        $(this).remove();
+        $("#baidu_geo").html("定位地点");
+    });
+
+
+
     //表单验证
     $(".publish-btn").click(function(){
         if($desc.val() == "") {
@@ -41,8 +49,6 @@ $(function () {
             return;
         }
         
-
-
     });
 
 
